@@ -1,0 +1,89 @@
+/* whole navbar custom styling */
+.navbar {
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 1000; /* ensures navbar stays on top of other elements */
+  padding-left: 0; /* can be adjusted */
+}
+
+/* for JUST the logo in the navbar */
+.navbar-brand img {
+  height: 50px;
+  width: auto;  /* This ensures the image maintains its original aspect ratio */
+  max-width: 100px;
+  object-fit: contain;
+}
+
+/* for anything in the navbar (any logo I think) */
+.navbar-brand {
+  margin-left: -60px;
+  padding-left: 0;
+}
+  
+/* Navbar Links (home,about,etc) Styling */
+.navbar-nav {
+  margin-left: auto;  /* Pushes the entire navbar list to the right */
+}
+  
+.navbar-nav .nav-link {
+  font-size: 18px;
+  color: black;       /* Sets the link color to black */
+  position: relative; /* needed for the hover underline effect */
+}
+
+.navbar-nav .nav-link::after{
+  content: ''; /* Creates an empty content for the ::after pseudo-element */
+  position: absolute; /* Allows the underline to be positioned relative to the parent element */
+  width: 0; /* Initially, the underline is invisible (0 width) */
+  height: 2px; /* Defines the thickness of the underline */
+  display: block; /* Ensures the underline behaves like a block element (takes up full width when expanded) */
+  margin-top: 5px; /* Adds space between the text and the underline */
+  right: 0; /* Positions the underline to the right side of the element */
+  background: #E7D4B5; /* The color of the underline */
+  transition: width 0.2s ease; /* Animates the underline expanding smoothly over 0.2 seconds */
+}
+  
+/* for the little underline thing after you hover */
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+  left:0;
+  background: #E7D4B5;
+}
+
+/* Spacing Between Nav Items */
+.navbar-nav .nav-item {
+  padding-left: 20px; /* Adds space between each menu item */
+}
+  
+/* fpr the background image */
+.hero-wrap {
+  /* background-image: url("images/clebeachbw.JPG"); display img as bg *LEFT ALONE FOR NOW* */
+  background-size: cover; /* stretch image to fill frame */
+  background-position: center center; /* center hor and vert */
+  display: flex; /* enable flexbox to center content */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-repeat: no-repeat;
+  width: 100%; /* take up whole page */
+  height: 100vh; /* vh stands for "viewport height" - make section as tall as screen */
+}
+
+.hero-wrap h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #000; /* You can adjust this to your liking */
+}
+
+.hero-wrap h2 {
+  font-size: 2rem;
+  color: #333; /* Adjust the color for the second heading */
+}
+ 
+/* rotating text on home-page */
+.txt-rotate > .wrap {
+  border-right: 2px solid #666; /* Cursor effect */
+  font-weight: bold;
+  color: #3e64ff; /* Text color */
+}
