@@ -1,10 +1,13 @@
 /* whole navbar custom styling */
 .navbar {
+
   background-color: transparent;
-  position: fixed;
+  position:fixed;
   width: 100%;
   z-index: 1000; /* ensures navbar stays on top of other elements */
   padding-left: 0; /* can be adjusted */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+
 }
 
 /* for JUST the logo in the navbar */
@@ -86,4 +89,74 @@
   border-right: 2px solid #666; /* Cursor effect */
   font-weight: bold;
   color: #3e64ff; /* Text color */
+}
+
+/* Styling for the about me section (image on left, info on right + social links) */
+.about-section {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: space-between; /* Ensure spacing between image and text */
+  height: 100vh; /* Full height of the viewport */
+  padding: 50px; /* General padding for content inside */
+}
+
+.about-image {
+  scale: 90%;
+  height: 100vh; /* Full height of the screen */
+  width: 100%; /* Take up half of the width */
+  background-size: cover; /* Ensure the image covers the div */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat;
+}
+
+.about-text {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+}
+
+.about-text h1 {
+  font-size: 18px;
+  line-height: 1.6; /* Space out the lines for readability */
+  margin-bottom: 20px; /* Space out the paragraphs */
+}
+
+.about-info li {
+  list-style: none;
+  padding: 10px 0;
+}
+
+.social-links ul {
+  list-style: none; /* Remove bullets */
+  padding: 0;
+  display: flex;
+  gap: 20px; /* Adds space between the icons */
+}
+
+.social-links ul li a {
+  font-size: 30px; /* Icon size */
+  color: #333; /* Icon color */
+  text-decoration: none;
+  justify-content: center;
+}
+
+.social-links ul li a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+.resume .btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.resume .btn:hover {
+  background-color: #0056b3;
 }
