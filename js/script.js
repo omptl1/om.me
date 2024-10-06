@@ -50,6 +50,15 @@ class TxtRotate {
     }
 }
 
+
+class scrollPastCertainPoint{
+
+
+
+  
+}
+
+
 // When the page loads, find all elements with class 'txt-rotate'
 window.onload = function() {
     const elements = document.getElementsByClassName('txt-rotate');
@@ -71,6 +80,19 @@ window.onload = function() {
     css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";  // Blinking cursor style
     document.body.appendChild(css);  // Add the style to the page
   };
+
+  // to hide the sidebar after a certain scroll point
+  window.addEventListener('scroll', function() {
+    var navi = document.getElementById('navi');
+    
+    // Show the sidebar when the scroll position is greater than 400px
+    if(window.scrollY > 1000) {
+        navi.style.opacity = '1'; // Show the sidebar
+    } else {
+        navi.style.opacity = '0'; // Hide the sidebar
+    }
+});
+
   
 
 
